@@ -4,7 +4,7 @@ module Markable
     belongs_to :marker, :polymorphic => true
 
     if defined?(ActiveModel::MassAssignmentSecurity)
-      attr_accessible :markable_id, :markable_type, :marker_id, :marker_type, :mark
+      attr_accessor :markable_id, :markable_type, :marker_id, :marker_type, :mark
     end
 
     # Delete orphan marks
